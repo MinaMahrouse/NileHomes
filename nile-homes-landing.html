@@ -1,0 +1,2335 @@
+<!doctype html>
+<html class="scroll-smooth" lang="ar" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Nile Homes | Find Your Dream Home Today</title>
+    <meta
+      name="description"
+      content="Buy, Sell or Rent premium properties with Nile Homes. Trusted real estate experts since 1994."
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-container": "#758dd5",
+              "surface-container": "#eeeeee",
+              "surface-tint": "#435b9f",
+              "surface-variant": "#e2e2e2",
+              "on-error-container": "#93000a",
+              tertiary: "#745b00",
+              "on-primary-fixed-variant": "#2a4386",
+              "tertiary-container": "#cda72f",
+              "on-secondary-container": "#745c00",
+              secondary: "#735c00",
+              "inverse-on-surface": "#f0f1f1",
+              "surface-container-highest": "#e2e2e2",
+              "on-error": "#ffffff",
+              "on-tertiary-container": "#4f3e00",
+              "on-secondary-fixed-variant": "#574500",
+              surface: "#f9f9f9",
+              "on-primary": "#ffffff",
+              "on-background": "#1a1c1c",
+              "on-tertiary": "#ffffff",
+              "secondary-fixed": "#ffe088",
+              "primary-fixed": "#dbe1ff",
+              background: "#f9f9f9",
+              error: "#ba1a1a",
+              "primary-container": "#002366",
+              "primary-fixed-dim": "#b3c5ff",
+              "on-secondary-fixed": "#241a00",
+              "outline-variant": "#c5c6d2",
+              "on-surface-variant": "#444650",
+              "surface-container-high": "#e8e8e8",
+              "error-container": "#ffdad6",
+              "surface-container-lowest": "#ffffff",
+              primary: "#00113a",
+              outline: "#757682",
+              "surface-container-low": "#f3f3f3",
+              "surface-bright": "#f9f9f9",
+              "on-secondary": "#ffffff",
+              "surface-dim": "#dadada",
+              "on-tertiary-fixed-variant": "#584400",
+              "on-surface": "#1a1c1c",
+              "on-primary-fixed": "#00174a",
+              "secondary-fixed-dim": "#e9c349",
+              "inverse-primary": "#b3c5ff",
+              "tertiary-fixed": "#ffe08b",
+              "on-tertiary-fixed": "#241a00",
+              "inverse-surface": "#2f3131",
+              "secondary-container": "#fed65b",
+              "tertiary-fixed-dim": "#eac249",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            fontFamily: {
+              headline: ["Noto Serif"],
+              body: ["Manrope"],
+              label: ["Manrope"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+
+      /* Smooth scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #00113a;
+        border-radius: 3px;
+      }
+
+      /* Fade-in animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes countUp {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes pulse-whatsapp {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+        }
+        50% {
+          box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+        }
+      }
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .hero-animate {
+        animation: fadeInUp 0.9s ease forwards;
+      }
+      .hero-animate-delay {
+        animation: fadeInUp 0.9s ease 0.3s forwards;
+        opacity: 0;
+      }
+      .hero-animate-delay2 {
+        animation: fadeInUp 0.9s ease 0.55s forwards;
+        opacity: 0;
+      }
+
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(25px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .fade-in-section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .whatsapp-btn {
+        animation: pulse-whatsapp 2.5s infinite;
+      }
+
+      /* Mobile menu slide */
+      .mobile-menu {
+        display: none;
+        animation: slideDown 0.3s ease;
+      }
+      .mobile-menu.open {
+        display: block;
+      }
+
+      /* Property card hover */
+      .prop-card {
+        transition:
+          transform 0.4s ease,
+          box-shadow 0.4s ease;
+      }
+      .prop-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 30px 60px rgba(0, 17, 58, 0.12);
+      }
+
+      /* Tab active */
+      .tab-btn.active {
+        background: #00113a;
+        color: white;
+      }
+      .tab-btn {
+        transition: all 0.25s ease;
+      }
+
+      /* Sticky CTA bar */
+      .sticky-cta {
+        transform: translateY(100px);
+        transition: transform 0.4s ease;
+      }
+      .sticky-cta.show {
+        transform: translateY(0);
+      }
+
+      /* Toast notification */
+      #toast {
+        transition: all 0.4s ease;
+        transform: translateY(80px);
+        opacity: 0;
+      }
+      #toast.show {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      /* Number counter */
+      .counter-value {
+        font-variant-numeric: tabular-nums;
+      }
+    </style>
+  </head>
+  <body class="bg-surface font-body text-on-surface overflow-x-hidden">
+    <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+    <a
+      href="https://wa.me/201000000000?text=مرحباً، أريد الاستفسار عن عقار"
+      target="_blank"
+      class="whatsapp-btn fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-xl transition-all hover:scale-110 group"
+      title="تواصل عبر واتساب"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="w-7 h-7"
+      >
+        <path
+          d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm0 1.8c2.2 0 4.27.86 5.82 2.41a8.2 8.2 0 012.41 5.7c0 4.54-3.7 8.24-8.23 8.24-1.48 0-2.93-.4-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31A8.17 8.17 0 013.93 11.9c0-4.54 3.7-8.11 8.11-8.11zm-2.3 4.3c-.2 0-.51.08-.78.37-.27.29-1.02 1-1.02 2.44 0 1.43 1.04 2.82 1.19 3.01.15.2 2.04 3.11 4.94 4.24.69.3 1.23.47 1.65.6.69.22 1.32.19 1.82.11.55-.08 1.71-.7 1.95-1.37.24-.67.24-1.25.17-1.37-.07-.12-.27-.19-.57-.33-.3-.14-1.71-.84-1.98-.94-.27-.1-.47-.14-.67.14-.2.28-.77.94-.94 1.13-.17.2-.34.22-.64.08-.3-.14-1.25-.46-2.38-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.34.44-.51.15-.17.2-.29.3-.49.1-.2.05-.37-.02-.51-.08-.14-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51-.17 0-.37-.01-.57-.01z"
+        />
+      </svg>
+      <span
+        class="absolute right-16 bg-gray-900 text-white text-xs px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+      >
+        تواصل الآن عبر WhatsApp
+      </span>
+    </a>
+
+    <!-- ===== STICKY BOTTOM CTA BAR (mobile) ===== -->
+    <div
+      id="sticky-cta"
+      class="sticky-cta fixed bottom-0 left-0 right-0 z-40 bg-primary px-4 py-3 md:hidden flex items-center justify-between shadow-2xl"
+    >
+      <p class="text-white text-sm font-semibold">هل تبحث عن عقارك المثالي؟</p>
+      <div class="flex gap-2">
+        <a
+          href="tel:+201000000000"
+          class="bg-secondary-container text-on-secondary-container px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-1"
+        >
+          <span class="material-symbols-outlined text-base">call</span> اتصل
+        </a>
+        <a
+          href="#contact"
+          class="bg-white text-primary px-4 py-2 rounded-lg text-sm font-bold"
+        >
+          تواصل
+        </a>
+      </div>
+    </div>
+
+    <!-- ===== TOAST NOTIFICATION ===== -->
+    <div
+      id="toast"
+      class="fixed bottom-24 left-1/2 -translate-x-1/2 z-50 bg-green-600 text-white px-6 py-3 rounded-full shadow-xl text-sm font-medium flex items-center gap-2 opacity-0 pointer-events-none"
+    >
+      <span id="toast-icon" class="material-symbols-outlined text-base">check_circle</span>
+      <span id="toast-message">تم إرسال رسالتك بنجاح! سنتواصل معك قريباً</span>
+    </div>
+
+    <!-- ===== TOP NAV ===== -->
+    <nav
+      id="navbar"
+      class="fixed top-0 w-full z-50 transition-all duration-300"
+      style="
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(20px);
+        box-shadow: 0 4px 30px rgba(0, 17, 58, 0.07);
+      "
+    >
+      <div
+        class="flex justify-between items-center px-6 lg:px-8 py-4 max-w-screen-2xl mx-auto"
+      >
+        <a
+          class="font-headline text-2xl font-bold tracking-tighter text-blue-950 flex items-center gap-2"
+          href="#"
+        >
+          <span
+            class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-yellow-400 text-xs font-black"
+            >NH</span
+          >
+          Nile Homes
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            class="font-sans font-medium tracking-wide uppercase text-xs text-blue-950 border-b-2 border-yellow-500 pb-1"
+            href="#properties"
+            >Properties</a
+          >
+          <a
+            class="font-sans font-medium tracking-wide uppercase text-xs text-blue-900/60 hover:text-blue-950 transition-all"
+            href="#categories"
+            >Categories</a
+          >
+          <a
+            class="font-sans font-medium tracking-wide uppercase text-xs text-blue-900/60 hover:text-blue-950 transition-all"
+            href="#about"
+            >About Us</a
+          >
+          <a
+            class="font-sans font-medium tracking-wide uppercase text-xs text-blue-900/60 hover:text-blue-950 transition-all"
+            href="#contact"
+            >Contact</a
+          >
+        </div>
+
+        <div class="flex items-center gap-3">
+          <!-- Phone CTA -->
+          <a
+            href="tel:+201000000000"
+            class="hidden lg:flex items-center gap-2 text-primary text-sm font-semibold hover:text-secondary transition-colors"
+          >
+            <span class="material-symbols-outlined text-lg">call</span>
+            +20 100 000 0000
+          </a>
+          <a
+            href="#contact"
+            class="bg-primary text-on-primary px-5 py-2.5 rounded-lg font-medium text-sm hover:bg-primary-container transition-all active:scale-95 hidden sm:block"
+          >
+            Book a Viewing
+          </a>
+          <!-- Mobile hamburger -->
+          <button
+            id="menu-btn"
+            class="md:hidden p-2 text-primary"
+            aria-label="Toggle menu"
+          >
+            <span class="material-symbols-outlined text-2xl">menu</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="mobile-menu bg-white border-t border-outline-variant/20 px-6 py-4 md:hidden"
+      >
+        <div class="flex flex-col gap-4">
+          <a
+            class="mobile-menu-link font-medium text-primary py-2 border-b border-outline-variant/20"
+            href="#properties"
+            >Properties</a
+          >
+          <a
+            class="mobile-menu-link font-medium text-on-surface-variant py-2 border-b border-outline-variant/20"
+            href="#categories"
+            >Categories</a
+          >
+          <a
+            class="mobile-menu-link font-medium text-on-surface-variant py-2 border-b border-outline-variant/20"
+            href="#about"
+            >About Us</a
+          >
+          <a
+            class="mobile-menu-link font-medium text-on-surface-variant py-2 border-b border-outline-variant/20"
+            href="#contact"
+            >Contact</a
+          >
+          <div class="flex gap-3 pt-2">
+            <a
+              href="tel:+201000000000"
+              class="flex-1 flex items-center justify-center gap-2 border border-primary text-primary py-2.5 rounded-lg font-medium text-sm"
+            >
+              <span class="material-symbols-outlined text-base">call</span> Call
+              Us
+            </a>
+            <a
+              href="https://wa.me/201000000000"
+              class="flex-1 flex items-center justify-center gap-2 bg-green-500 text-white py-2.5 rounded-lg font-medium text-sm"
+            >
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section
+      class="relative min-h-screen flex items-center pt-20 overflow-hidden"
+    >
+      <div class="absolute inset-0 z-0">
+        <img
+          alt="Luxury Real Estate"
+          class="w-full h-full object-cover"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAThgsroK0X5IXNgdgWEo48LBhHKrD_06KGjmuRtQN_-FMPYAR1RJZva7NE5ndRJ5VbNRnDgkjPbbpydp5woQhc_FVTwT4MYe4txXRlSMjAzXBbA0dJKzPG_uYc8i_LdKdiDrY1t7AIldYmZWN2Ntf3QT5AK6ipjrxxh93bmY2wpIIZcJIJrsxQM_pnx3G1nt84veQZwjE_LBX6JC6crnp_GaV5fPryd2BBFSG4kjNVbNsjJgvI0tVS0YB82yHTWZGH4J-P3-ETkg"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent"
+        ></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full py-20">
+        <div class="max-w-2xl">
+          <span
+            class="hero-animate inline-block px-4 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-extrabold uppercase tracking-[0.2em] rounded-full mb-6"
+          >
+            Est. 1994 · Trusted By 4,500+ Families
+          </span>
+          <h1
+            class="hero-animate-delay font-headline text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight tracking-tight"
+          >
+            Discover Your <br /><span class="italic text-secondary-fixed-dim"
+              >Perfect</span
+            >
+            Property
+          </h1>
+          <p
+            class="hero-animate-delay2 text-white/85 text-lg md:text-xl font-light mb-10 max-w-lg leading-relaxed"
+          >
+            Buy, Sell, or Rent with Confidence. Experience the pinnacle of
+            architectural excellence and personalized service.
+          </p>
+
+          <!-- Tabs: Buy / Sell / Rent -->
+          <div
+            class="hero-animate-delay2 flex gap-1 mb-5 bg-white/15 backdrop-blur rounded-xl p-1 w-fit"
+          >
+            <button
+              data-tab="buy"
+              id="tab-buy"
+              class="tab-btn active px-6 py-2 rounded-lg text-sm font-bold text-white uppercase tracking-wider"
+            >
+              Buy
+            </button>
+            <button
+              data-tab="rent"
+              id="tab-rent"
+              class="tab-btn px-6 py-2 rounded-lg text-sm font-bold text-white/70 uppercase tracking-wider hover:text-white"
+            >
+              Rent
+            </button>
+            <button
+              data-tab="sell"
+              id="tab-sell"
+              class="tab-btn px-6 py-2 rounded-lg text-sm font-bold text-white/70 uppercase tracking-wider hover:text-white"
+            >
+              Sell
+            </button>
+          </div>
+
+          <!-- Search Bar -->
+          <div
+            class="hero-animate-delay2 bg-white p-2 rounded-xl shadow-2xl flex flex-col md:flex-row items-stretch gap-2 max-w-3xl"
+          >
+            <div
+              class="flex-1 px-4 py-3 flex flex-col justify-center md:border-r border-outline-variant/30"
+            >
+              <label
+                class="text-[10px] uppercase tracking-widest text-outline font-bold mb-1"
+                >Location</label
+              >
+              <input
+                id="search-location"
+                class="bg-transparent border-none p-0 text-primary placeholder:text-gray-400 focus:ring-0 font-medium text-sm"
+                placeholder="Cairo, Alexandria, Giza..."
+                type="text"
+              />
+            </div>
+            <div
+              class="flex-1 px-4 py-3 flex flex-col justify-center md:border-r border-outline-variant/30"
+            >
+              <label
+                class="text-[10px] uppercase tracking-widest text-outline font-bold mb-1"
+                >Type</label
+              >
+              <select
+                id="search-type"
+                class="bg-transparent border-none p-0 text-primary focus:ring-0 font-medium text-sm appearance-none"
+              >
+                <option value="all">All types</option>
+                <option value="apartment">Apartment</option>
+                <option value="villa">Luxury Villa</option>
+                <option value="penthouse">Penthouse</option>
+                <option value="office">Office Space</option>
+                <option value="land">Land</option>
+              </select>
+            </div>
+            <div
+              class="flex-1 px-4 py-3 flex flex-col justify-center md:border-r border-outline-variant/30"
+            >
+              <label
+                class="text-[10px] uppercase tracking-widest text-outline font-bold mb-1"
+                >Budget</label
+              >
+              <input
+                id="search-budget"
+                class="bg-transparent border-none p-0 text-primary placeholder:text-gray-400 focus:ring-0 font-medium text-sm"
+                placeholder="$500,000+"
+                type="text"
+              />
+            </div>
+            <button
+              id="search-button"
+              class="bg-primary text-on-primary px-8 py-4 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-secondary transition-all active:scale-95 text-sm"
+            >
+              <span class="material-symbols-outlined text-lg">search</span>
+              <span class="hidden sm:inline">Browse</span>
+            </button>
+          </div>
+
+          <!-- Quick stats -->
+          <div class="hero-animate-delay2 flex gap-8 mt-10">
+            <div class="text-white">
+              <p
+                class="text-2xl font-headline font-bold text-secondary-fixed-dim"
+              >
+                4,500+
+              </p>
+              <p class="text-xs text-white/60 uppercase tracking-widest">
+                Happy Families
+              </p>
+            </div>
+            <div class="w-px bg-white/20"></div>
+            <div class="text-white">
+              <p
+                class="text-2xl font-headline font-bold text-secondary-fixed-dim"
+              >
+                $12B+
+              </p>
+              <p class="text-xs text-white/60 uppercase tracking-widest">
+                Assets Sold
+              </p>
+            </div>
+            <div class="w-px bg-white/20"></div>
+            <div class="text-white">
+              <p
+                class="text-2xl font-headline font-bold text-secondary-fixed-dim"
+              >
+                30+
+              </p>
+              <p class="text-xs text-white/60 uppercase tracking-widest">
+                Years Active
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div
+        class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-white/60 animate-bounce"
+      >
+        <span class="material-symbols-outlined text-xl">expand_more</span>
+      </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section class="py-20 bg-surface-container-low fade-in-section">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          <div class="group text-center lg:text-left">
+            <div
+              class="w-14 h-14 rounded-full bg-secondary-container flex items-center justify-center mb-5 text-primary group-hover:scale-110 transition-transform mx-auto lg:mx-0"
+            >
+              <span class="material-symbols-outlined text-2xl"
+                >verified_user</span
+              >
+            </div>
+            <h3 class="font-headline text-lg mb-2">Trusted Agents</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">
+              Hand-picked professionals guiding every transaction.
+            </p>
+          </div>
+          <div class="group text-center lg:text-left">
+            <div
+              class="w-14 h-14 rounded-full bg-secondary-container flex items-center justify-center mb-5 text-primary group-hover:scale-110 transition-transform mx-auto lg:mx-0"
+            >
+              <span class="material-symbols-outlined text-2xl">payments</span>
+            </div>
+            <h3 class="font-headline text-lg mb-2">Best Prices</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">
+              Market-leading valuations for buyers and sellers.
+            </p>
+          </div>
+          <div class="group text-center lg:text-left">
+            <div
+              class="w-14 h-14 rounded-full bg-secondary-container flex items-center justify-center mb-5 text-primary group-hover:scale-110 transition-transform mx-auto lg:mx-0"
+            >
+              <span class="material-symbols-outlined text-2xl">fact_check</span>
+            </div>
+            <h3 class="font-headline text-lg mb-2">Verified Listings</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">
+              Each property passes a rigorous 50-point inspection.
+            </p>
+          </div>
+          <div class="group text-center lg:text-left">
+            <div
+              class="w-14 h-14 rounded-full bg-secondary-container flex items-center justify-center mb-5 text-primary group-hover:scale-110 transition-transform mx-auto lg:mx-0"
+            >
+              <span class="material-symbols-outlined text-2xl">speed</span>
+            </div>
+            <h3 class="font-headline text-lg mb-2">Fast Process</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed">
+              Digital-first documentation for stress-free closings.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURED PROPERTIES ===== -->
+    <section id="properties" class="py-24 bg-surface fade-in-section">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div
+          class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-12 gap-4"
+        >
+          <div>
+            <span
+              class="text-secondary text-xs font-bold uppercase tracking-widest"
+              >Premium Selection</span
+            >
+            <h2
+              class="font-headline text-4xl md:text-5xl text-primary mt-2 mb-2"
+            >
+              Curated Residences
+            </h2>
+            <p class="text-on-surface-variant">
+              Exceptional homes for exceptional individuals.
+            </p>
+          </div>
+          <a
+            class="text-primary font-bold text-sm tracking-widest border-b-2 border-secondary-fixed-dim pb-1 hover:pb-2 transition-all whitespace-nowrap"
+            href="#"
+            >VIEW ALL →</a
+          >
+        </div>
+
+        <!-- Filter Tabs -->
+        <div
+          id="filter-buttons"
+          class="flex gap-2 mb-10 overflow-x-auto pb-2 scrollbar-hide"
+        ></div>
+
+        <div
+          id="properties-grid"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        ></div>
+        <div
+          id="skeleton-grid"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4 hidden"
+          aria-hidden="true"
+        ></div>
+        <div
+          id="no-results"
+          class="mt-16 rounded-3xl border border-outline-variant/40 bg-white px-8 py-12 text-center hidden"
+        >
+          <p class="text-2xl font-bold text-primary mb-3">
+            لم يتم العثور على نتائج
+          </p>
+          <p class="text-on-surface-variant">
+            جرب تعديل الموقع أو السعر للحصول على المزيد من الخيارات.
+          </p>
+        </div>
+        <div class="mt-10 flex justify-center">
+          <button
+            id="load-more-btn"
+            class="px-10 py-3 rounded-full border border-primary text-primary font-bold transition-all hover:bg-primary hover:text-white hidden"
+          >
+            Load More
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAVORITES SECTION ===== -->
+    <section
+      id="favorites-section"
+      class="py-14 bg-surface-container-low rounded-3xl fade-in-section hidden"
+    >
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div
+          class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
+        >
+          <div>
+            <span
+              class="text-secondary text-xs font-bold uppercase tracking-widest"
+              >Favorites</span
+            >
+            <h2 class="font-headline text-4xl text-primary mt-2">
+              Saved Properties
+            </h2>
+            <p class="text-on-surface-variant mt-2">
+              Quick access to the homes you loved most.
+            </p>
+          </div>
+          <button
+            id="clear-favorites-btn"
+            class="rounded-full border border-outline-variant px-5 py-2 text-sm font-bold text-primary hover:bg-primary/5 transition-all"
+          >
+            Clear Favorites
+          </button>
+        </div>
+        <div
+          id="favorites-grid"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10"
+        ></div>
+      </div>
+    </section>
+
+    <!-- ===== PROPERTY CATEGORIES ===== -->
+    <section id="categories" class="py-24 overflow-hidden fade-in-section">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <h2 class="font-headline text-4xl text-center mb-4">
+          Explore By Category
+        </h2>
+        <p class="text-on-surface-variant text-center mb-14 max-w-md mx-auto">
+          Browse through our carefully curated property categories
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 h-auto md:h-[550px]">
+          <div
+            class="relative group cursor-pointer overflow-hidden rounded-2xl h-64 md:h-auto md:col-span-1"
+            data-filter-target="apartment"
+          >
+            <img
+              alt="Apartments"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_TdEiHwhLvFKhDXt2X04WErVdpdQ3YkI6y4EwYnHdCsQl4NzSyJstuDo7_dW94WTX29XMgdrCxsiPJ-WXqWFUaAEjmVFYodu0AGpTm3MqxxpUp_XCjqAMP_dJGSrWcF1D0iuF6xwAgOAweYFUWFa_Z3CJJ1SjbzT7ZGi31JFDdhHXuJs4JvZfOmKHzj6yDzZrqTJBFcQGX6IbHzkcBMsuVMeTRE6QadpjWVDxXrSKsxHZnaWovAcypXM6AXhQPu9EhATv6Gjc6Q"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/20 to-transparent group-hover:from-primary/95 transition-all"
+            ></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <h5 class="text-white font-headline text-2xl mb-1">Apartments</h5>
+              <p class="text-white/70 text-xs tracking-widest uppercase">
+                124 Listings
+              </p>
+              <span
+                class="inline-block mt-3 text-secondary-fixed-dim text-xs font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0"
+                >Browse →</span
+              >
+            </div>
+          </div>
+          <div
+            class="relative group cursor-pointer overflow-hidden rounded-2xl h-64 md:h-auto md:col-span-2"
+            data-filter-target="villa"
+          >
+            <img
+              alt="Villas"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkqCbEqpXlukK-wa8sGQPd-SH4eU7lxc_adGtAUKvmAG_bpg1lkstDwXKNNy3YMVrLkiaJMbY5lgS-VAP4LbTUV9-gdJeOOd4Z7eix82GsUZ3EgW04dm659G8H7E4BHwVDlFC-hUWrchlWIihGocVTBvNiWoZf9Lb1iSm0ZCpffPvRhu4D0E9tMhHL60PalZNKTdMLYpP1iFsF9wykGj1km2SEh-NXemmhCZoAEvwm-xA-_rpJicEPwLOgNfsUp40LdesbwUk0uw"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/20 to-transparent group-hover:from-primary/95 transition-all"
+            ></div>
+            <div class="absolute bottom-8 left-8 right-8">
+              <h5 class="text-white font-headline text-3xl mb-1">Villas</h5>
+              <p class="text-white/70 text-xs tracking-widest uppercase">
+                56 Listings
+              </p>
+              <span
+                class="inline-block mt-3 text-secondary-fixed-dim text-xs font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0"
+                >Browse →</span
+              >
+            </div>
+          </div>
+          <div class="md:col-span-1 flex flex-col gap-4">
+            <div
+              class="relative h-48 md:h-1/2 rounded-2xl overflow-hidden group cursor-pointer"
+              data-filter-target="office"
+            >
+              <img
+                alt="Offices"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJFcJDEHLI1yQa8iyqWHGrgmg12jBBDb7FfCmNL-7qNpdSS6Ufyyqyn3x7w2X3sBkvO2kDgALTHh7lYi4mC3b4O9TG-BByTxoaUabCN9IqST0xWfuluf0a0zUF3AR7rUBV0_5Mwmzf4j6psWCDKhAKGCC4VciwjnIjOn7ASuCoVdingScqXesD7gCMyYq0UY2YIJTO954JVOjTX073-YobEclCZ2VW23x1_vpX78nCImBy7qERvwrNgJEaP0zNoTrHm9FW93aoSw"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-primary/85 to-transparent"
+              ></div>
+              <div class="absolute bottom-4 left-5">
+                <h5 class="text-white font-headline text-xl">Offices</h5>
+                <p class="text-white/60 text-[10px] uppercase tracking-widest">
+                  38 Listings
+                </p>
+              </div>
+            </div>
+            <div
+              class="relative h-48 md:h-1/2 rounded-2xl overflow-hidden group cursor-pointer"
+            >
+              <img
+                alt="Land"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUFqV-OPnB7s2kk2ongUpOalQTGMO-FhpfYqIt-hb-ZRAbzYNEaEx2nkQJYGI-8NIa-c3NvoX8lY0G6B18EvVCcd0HLL85dDEKdXX0VqIKMUrgHNcwPHQNJEVq5Ug7_FljiavpBBmMXRUZ2K0F1qDCw5Du44pIJIjx1R-yclN0ztFp_LsYnuMKU9qAekJsz9_f-X406ANVqcYkRLhABYostCxu8pusx7-IKTz0sOQabJeyAFmvC-FlujO7Ur4xCThn0ZuQHEBq9A"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-primary/85 to-transparent"
+              ></div>
+              <div class="absolute bottom-4 left-5">
+                <h5 class="text-white font-headline text-xl">Land</h5>
+                <p class="text-white/60 text-[10px] uppercase tracking-widest">
+                  22 Listings
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT US ===== -->
+    <section id="about" class="py-24 bg-primary text-white fade-in-section">
+      <div
+        class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center"
+      >
+        <div class="relative">
+          <div
+            class="relative z-10 rounded-2xl overflow-hidden aspect-[4/5] shadow-2xl"
+          >
+            <img
+              alt="About Nile Homes"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtqtrn5fcXqqDpwvKjekfhv2uyWq_OZfEyWSkqFHyMCMFXqznmFZHLoQV6Ufd2Rp8BY_Iv_Swsd6F0fJLqwIV_-KuoisTXE-Ok6kV8To2hl_l7iApAc_5FtkwL9lDtg1cLpbdYVlNflVO4xo_fqFvF-Bk-xPe0TdoOoYpQXlAcWM_pIpOK54ywiBkRFDskjxMmSF9kVuUcDSG1KE42zjbAyRlsijvbcOHLP48hJckIrBhqgdhx8ct_l53F9Utv-zcY-I18B7Yw4w"
+            />
+          </div>
+          <div
+            class="absolute -bottom-10 -right-10 w-56 h-56 bg-secondary-container rounded-2xl -z-0 hidden md:block opacity-40"
+          ></div>
+          <div
+            class="absolute top-10 -left-8 p-8 bg-white text-primary rounded-2xl z-20 shadow-xl hidden md:block"
+          >
+            <p
+              class="font-headline text-4xl font-bold mb-1 counter-value"
+              data-target="30"
+            >
+              0
+            </p>
+            <p class="text-xs font-bold tracking-widest uppercase opacity-70">
+              Years of Experience
+            </p>
+          </div>
+        </div>
+        <div>
+          <span
+            class="text-secondary-fixed-dim font-bold tracking-[0.3em] uppercase text-xs mb-6 block"
+            >Our Heritage</span
+          >
+          <h2 class="font-headline text-4xl md:text-5xl mb-8 leading-tight">
+            Defining Luxury Real Estate Since 1994.
+          </h2>
+          <p class="text-white/70 mb-6 leading-relaxed text-lg">
+            At Nile Homes, we don't just sell properties; we curate legacies.
+            Our commitment to architectural excellence and unparalleled client
+            service has made us the trusted partner for the world's most
+            discerning homeowners.
+          </p>
+          <p class="text-white/60 mb-12 leading-relaxed">
+            From iconic city penthouses to secluded island retreats, our
+            portfolio represents the finest real estate the market has to offer.
+          </p>
+          <div class="grid grid-cols-3 gap-6 mb-10">
+            <div class="text-center lg:text-left">
+              <p
+                class="text-3xl md:text-4xl font-headline text-secondary-fixed-dim mb-1 counter-value"
+                data-target="12"
+                data-suffix="B+"
+              >
+                $0
+              </p>
+              <p class="text-xs uppercase tracking-widest text-white/50">
+                Assets Sold
+              </p>
+            </div>
+            <div class="text-center lg:text-left">
+              <p
+                class="text-3xl md:text-4xl font-headline text-secondary-fixed-dim mb-1 counter-value"
+                data-target="4500"
+                data-suffix="+"
+              >
+                0
+              </p>
+              <p class="text-xs uppercase tracking-widest text-white/50">
+                Happy Families
+              </p>
+            </div>
+            <div class="text-center lg:text-left">
+              <p
+                class="text-3xl md:text-4xl font-headline text-secondary-fixed-dim mb-1 counter-value"
+                data-target="200"
+                data-suffix="+"
+              >
+                0
+              </p>
+              <p class="text-xs uppercase tracking-widest text-white/50">
+                Expert Agents
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <a
+              href="#contact"
+              class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-lg font-bold uppercase tracking-wider hover:scale-105 transition-all"
+            >
+              Get In Touch
+            </a>
+            <a
+              href="tel:+201000000000"
+              class="border border-white/30 text-white px-8 py-4 rounded-lg font-bold hover:bg-white/10 transition-all flex items-center gap-2"
+            >
+              <span class="material-symbols-outlined text-lg">call</span> Call
+              Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="py-24 bg-surface-container-lowest fade-in-section">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <span
+            class="text-secondary text-xs font-bold uppercase tracking-widest"
+            >What Clients Say</span
+          >
+          <h2 class="font-headline text-4xl mt-3">Clients & Stories</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="relative p-8 bg-white rounded-2xl shadow-sm border border-outline-variant/10 hover:shadow-lg transition-all"
+          >
+            <span
+              class="material-symbols-outlined text-secondary-fixed-dim text-4xl absolute -top-5 left-6 bg-white px-2"
+              >format_quote</span
+            >
+            <div class="flex mb-4 gap-1">
+              <span class="text-yellow-400 text-sm">★★★★★</span>
+            </div>
+            <p class="text-on-surface-variant italic mb-8 leading-relaxed">
+              "Nile Homes made the process of selling our family estate
+              effortless. Their attention to detail and market positioning was
+              flawless."
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-100">
+                <img
+                  alt="Jonathan Sterling"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuApuzNUB2EZy9ipjpWvZhqvhF-i8oLGP4gK_lT2hetvomoacdDRe1eDwhk_UeU9iJdW-B99Z6RUesrZ9KFdtoUoKVh6Rre_6y4Atvxa-dFEafJXGDDQq7X5w5bo2CUfutXeWJdEWsccGRWPIctsIZhxa3F07yKvt-wJTMeMHoCFk4OZM92UOBRpYm1Puskc-3xAhM_2wemmLKU-OxBiIOzA6U5gGdl1_5aZUBhcJK8CH02iOrc_79G9WV-JYCWlKBcSaNbmyePYMg"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h6 class="font-bold text-sm">Jonathan Sterling</h6>
+                <p class="text-[10px] uppercase tracking-widest text-outline">
+                  CEO, Sterling Group
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="relative p-8 bg-white rounded-2xl shadow-sm border border-outline-variant/10 hover:shadow-lg transition-all"
+          >
+            <span
+              class="material-symbols-outlined text-secondary-fixed-dim text-4xl absolute -top-5 left-6 bg-white px-2"
+              >format_quote</span
+            >
+            <div class="flex mb-4 gap-1">
+              <span class="text-yellow-400 text-sm">★★★★★</span>
+            </div>
+            <p class="text-on-surface-variant italic mb-8 leading-relaxed">
+              "Finding a home that matches your soul is rare. The team at Nile
+              Homes understood our vision immediately and delivered beyond
+              expectations."
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-100">
+                <img
+                  alt="Elena Rodriguez"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuASjoL7PgVkZKZyfF0fpVAHE0gM2iCWHukkm0z72wmNkmzuabKFs0aKN3NvI5ukOJfWCKudUP3BMfBgYlHavyqSyN8e4XdiJvk8JPuj1FWcMMKPQyb0p207AvU01mWe0beUnX8f4UljRAdn5yQGdnOi9f8VjmS6rmmPi_I0e4qXKwCDWxnVJ8fvsPA2gMD3iB5Vr6fCK90aeUs7aJYKHsKrZu3iBxXEraK0bXE3qAesUeU7gXfeT6Dj2mQ_R2l9hF2I0UsyO1CMrA"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h6 class="font-bold text-sm">Elena Rodriguez</h6>
+                <p class="text-[10px] uppercase tracking-widest text-outline">
+                  Interior Architect
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="relative p-8 bg-white rounded-2xl shadow-sm border border-outline-variant/10 hover:shadow-lg transition-all"
+          >
+            <span
+              class="material-symbols-outlined text-secondary-fixed-dim text-4xl absolute -top-5 left-6 bg-white px-2"
+              >format_quote</span
+            >
+            <div class="flex mb-4 gap-1">
+              <span class="text-yellow-400 text-sm">★★★★★</span>
+            </div>
+            <p class="text-on-surface-variant italic mb-8 leading-relaxed">
+              "Transparency and expertise — the two pillars I look for in real
+              estate. Nile Homes embodies both perfectly in every interaction."
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full overflow-hidden bg-gray-100">
+                <img
+                  alt="David Chen"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX0j75wiwI_MIScRg54_rbiYvt9UJXglvYhQVlqMbF_OWzjd_BMzOoVVm4xRJPoRNm9cFrRfg5-YS1gi8FdBskB6jZx71_xnTt2WnNSEs4jAm11IzBiLlkw78riFZPgAId9fK1z7xtIBxJ6Sd4uAvzuWmmx-f921tf2k4bt__lNtVXM9TqaOk-mDEJiQfF9I8J1P6NqJg9TO-bMXdZ9B-RDJHtN_2G4Wl5IF8gT0a9rrfphLWCrDu-Sh9RosFjbqBkJwUWDKMJwA"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h6 class="font-bold text-sm">David Chen</h6>
+                <p class="text-[10px] uppercase tracking-widest text-outline">
+                  Investment Partner
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="py-20 fade-in-section">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div
+          class="relative rounded-3xl overflow-hidden bg-primary p-12 md:p-20 text-center"
+        >
+          <div class="absolute inset-0 opacity-10">
+            <img
+              alt=""
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQO625RobEmP8kiYRUf_ZvhTaNSS0WGMtHblqkNJqLr6rowoqHRz2kPQDxNC9V-xmdxTrRXTfpl7HcNDUn_MLm44nF-gOCH7gmOM9fsNu8u-b-uCHWSGmgDlQBRYDOTZoVxhf7tlSwgZ2pAwL30rgcRkbUx_kIgMyTvs9zkBSDLt94DddegAawXMSvzbpUWjkGl39-J5O3A9ZuxdzAjYTti5ti8WFoYWry8GXnOYEl6fHwFxQkJqexGNQdukouTllhdlzgBi-aGQ"
+            />
+          </div>
+          <div class="relative z-10">
+            <span
+              class="inline-block bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-widest mb-6"
+              >Limited Availability</span
+            >
+            <h2 class="font-headline text-4xl md:text-5xl text-white mb-6">
+              Looking to Buy or Sell?
+            </h2>
+            <p class="text-white/70 text-lg mb-10 max-w-2xl mx-auto">
+              Join the hundreds of satisfied homeowners who found their
+              masterpiece with Nile Homes.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="#contact"
+                class="bg-secondary-container text-on-secondary-container px-10 py-4 rounded-lg font-extrabold uppercase tracking-widest hover:scale-105 transition-all shadow-xl"
+              >
+                Contact Us Now
+              </a>
+              <a
+                href="https://wa.me/201000000000"
+                class="flex items-center justify-center gap-3 bg-green-500 text-white px-10 py-4 rounded-lg font-extrabold uppercase tracking-widest hover:scale-105 hover:bg-green-600 transition-all shadow-xl"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="w-5 h-5"
+                >
+                  <path
+                    d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm0 1.8c2.2 0 4.27.86 5.82 2.41a8.2 8.2 0 012.41 5.7c0 4.54-3.7 8.24-8.23 8.24-1.48 0-2.93-.4-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31A8.17 8.17 0 013.93 11.9c0-4.54 3.7-8.11 8.11-8.11zm-2.3 4.3c-.2 0-.51.08-.78.37-.27.29-1.02 1-1.02 2.44 0 1.43 1.04 2.82 1.19 3.01.15.2 2.04 3.11 4.94 4.24.69.3 1.23.47 1.65.6.69.22 1.32.19 1.82.11.55-.08 1.71-.7 1.95-1.37.24-.67.24-1.25.17-1.37-.07-.12-.27-.19-.57-.33-.3-.14-1.71-.84-1.98-.94-.27-.1-.47-.14-.67.14-.2.28-.77.94-.94 1.13-.17.2-.34.22-.64.08-.3-.14-1.25-.46-2.38-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.34.44-.51.15-.17.2-.29.3-.49.1-.2.05-.37-.02-.51-.08-.14-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51-.17 0-.37-.01-.57-.01z"
+                  />
+                </svg>
+                WhatsApp Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact" class="py-24 bg-surface fade-in-section">
+      <div
+        class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-5 gap-16"
+      >
+        <div class="lg:col-span-2">
+          <span
+            class="text-secondary text-xs font-bold uppercase tracking-widest"
+            >Let's Talk</span
+          >
+          <h2 class="font-headline text-4xl text-primary mt-3 mb-6">
+            Get in Touch
+          </h2>
+          <p class="text-on-surface-variant mb-10 leading-relaxed">
+            Have a specific property in mind or want to list your residence? Our
+            concierge team is ready to assist you 24/7.
+          </p>
+
+          <div class="space-y-6 mb-10">
+            <a
+              href="https://maps.google.com"
+              class="flex gap-5 items-start hover:opacity-80 transition-opacity group"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0"
+              >
+                <span class="material-symbols-outlined text-secondary text-lg"
+                  >location_on</span
+                >
+              </div>
+              <div>
+                <h6 class="font-bold text-primary text-sm">Headquarters</h6>
+                <p class="text-sm text-on-surface-variant mt-1">
+                  742 Evergreen Terrace, Beverly Hills, CA 90210
+                </p>
+              </div>
+            </a>
+            <a
+              href="mailto:concierge@nilehomes.com"
+              class="flex gap-5 items-start hover:opacity-80 transition-opacity group"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0"
+              >
+                <span class="material-symbols-outlined text-secondary text-lg"
+                  >mail</span
+                >
+              </div>
+              <div>
+                <h6 class="font-bold text-primary text-sm">Email Us</h6>
+                <p class="text-sm text-on-surface-variant mt-1">
+                  concierge@nilehomes.com
+                </p>
+              </div>
+            </a>
+            <a
+              href="tel:+201000000000"
+              class="flex gap-5 items-start hover:opacity-80 transition-opacity group"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0"
+              >
+                <span class="material-symbols-outlined text-secondary text-lg"
+                  >call</span
+                >
+              </div>
+              <div>
+                <h6 class="font-bold text-primary text-sm">Phone</h6>
+                <p class="text-sm text-on-surface-variant mt-1">
+                  +1 (800) NILE-LUX
+                </p>
+              </div>
+            </a>
+            <a
+              href="https://wa.me/201000000000"
+              class="flex gap-5 items-start hover:opacity-80 transition-opacity group"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="w-5 h-5 text-green-600"
+                >
+                  <path
+                    d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm0 1.8c2.2 0 4.27.86 5.82 2.41a8.2 8.2 0 012.41 5.7c0 4.54-3.7 8.24-8.23 8.24-1.48 0-2.93-.4-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31A8.17 8.17 0 013.93 11.9c0-4.54 3.7-8.11 8.11-8.11zm-2.3 4.3c-.2 0-.51.08-.78.37-.27.29-1.02 1-1.02 2.44 0 1.43 1.04 2.82 1.19 3.01.15.2 2.04 3.11 4.94 4.24.69.3 1.23.47 1.65.6.69.22 1.32.19 1.82.11.55-.08 1.71-.7 1.95-1.37.24-.67.24-1.25.17-1.37-.07-.12-.27-.19-.57-.33-.3-.14-1.71-.84-1.98-.94-.27-.1-.47-.14-.67.14-.2.28-.77.94-.94 1.13-.17.2-.34.22-.64.08-.3-.14-1.25-.46-2.38-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.34.44-.51.15-.17.2-.29.3-.49.1-.2.05-.37-.02-.51-.08-.14-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51-.17 0-.37-.01-.57-.01z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h6 class="font-bold text-primary text-sm">WhatsApp</h6>
+                <p class="text-sm text-on-surface-variant mt-1">
+                  +20 100 000 0000 · Quick Response
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div
+          class="lg:col-span-3 bg-white p-10 rounded-3xl shadow-[0px_20px_60px_rgba(0,17,58,0.08)]"
+        >
+          <h3 class="font-headline text-2xl text-primary mb-8">
+            Send Us a Message
+          </h3>
+          <div class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label
+                  class="text-[10px] uppercase font-bold tracking-widest text-outline block mb-2"
+                  >Full Name *</label
+                >
+                <input
+                  id="c-name"
+                  class="w-full bg-transparent border-0 border-b-2 border-outline-variant focus:border-secondary focus:ring-0 py-2 text-sm placeholder:text-gray-300 outline-none transition-colors"
+                  placeholder="John Doe"
+                  type="text"
+                />
+              </div>
+              <div>
+                <label
+                  class="text-[10px] uppercase font-bold tracking-widest text-outline block mb-2"
+                  >Email Address *</label
+                >
+                <input
+                  id="c-email"
+                  class="w-full bg-transparent border-0 border-b-2 border-outline-variant focus:border-secondary focus:ring-0 py-2 text-sm placeholder:text-gray-300 outline-none transition-colors"
+                  placeholder="john@example.com"
+                  type="email"
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                class="text-[10px] uppercase font-bold tracking-widest text-outline block mb-2"
+                >Phone Number</label
+              >
+              <input
+                id="c-phone"
+                class="w-full bg-transparent border-0 border-b-2 border-outline-variant focus:border-secondary focus:ring-0 py-2 text-sm placeholder:text-gray-300 outline-none transition-colors"
+                placeholder="+20 100 000 0000"
+                type="tel"
+              />
+            </div>
+            <div>
+              <label
+                class="text-[10px] uppercase font-bold tracking-widest text-outline block mb-2"
+                >Interest</label
+              >
+              <select
+                id="c-interest"
+                class="w-full bg-transparent border-0 border-b-2 border-outline-variant focus:border-secondary focus:ring-0 py-2 text-sm outline-none transition-colors appearance-none"
+              >
+                <option value="">Select your interest...</option>
+                <option>Buy a Property</option>
+                <option>Rent a Property</option>
+                <option>List My Property</option>
+                <option>Investment Advice</option>
+                <option>Book a Viewing</option>
+              </select>
+            </div>
+            <div>
+              <label
+                class="text-[10px] uppercase font-bold tracking-widest text-outline block mb-2"
+                >Message</label
+              >
+              <textarea
+                id="c-message"
+                class="w-full bg-transparent border-0 border-b-2 border-outline-variant focus:border-secondary focus:ring-0 py-2 text-sm placeholder:text-gray-300 resize-none outline-none transition-colors"
+                placeholder="Tell us what you're looking for..."
+                rows="4"
+              ></textarea>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+              <button
+                id="contact-submit"
+                class="flex-1 py-4 bg-primary text-on-primary font-bold uppercase tracking-[0.2em] rounded-xl hover:bg-primary-container transition-all text-sm active:scale-95"
+              >
+                Send Inquiry
+              </button>
+              <a
+                href="https://wa.me/201000000000"
+                class="flex-1 py-4 bg-green-500 text-white font-bold uppercase tracking-wider rounded-xl hover:bg-green-600 transition-all text-sm text-center flex items-center justify-center gap-2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="w-4 h-4"
+                >
+                  <path
+                    d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm0 1.8c2.2 0 4.27.86 5.82 2.41a8.2 8.2 0 012.41 5.7c0 4.54-3.7 8.24-8.23 8.24-1.48 0-2.93-.4-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31A8.17 8.17 0 013.93 11.9c0-4.54 3.7-8.11 8.11-8.11zm-2.3 4.3c-.2 0-.51.08-.78.37-.27.29-1.02 1-1.02 2.44 0 1.43 1.04 2.82 1.19 3.01.15.2 2.04 3.11 4.94 4.24.69.3 1.23.47 1.65.6.69.22 1.32.19 1.82.11.55-.08 1.71-.7 1.95-1.37.24-.67.24-1.25.17-1.37-.07-.12-.27-.19-.57-.33-.3-.14-1.71-.84-1.98-.94-.27-.1-.47-.14-.67.14-.2.28-.77.94-.94 1.13-.17.2-.34.22-.64.08-.3-.14-1.25-.46-2.38-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.34.44-.51.15-.17.2-.29.3-.49.1-.2.05-.37-.02-.51-.08-.14-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51-.17 0-.37-.01-.57-.01z"
+                  />
+                </svg>
+                WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-blue-950 text-white pt-16 pb-24 md:pb-8 px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12"
+        >
+          <div>
+            <a class="font-headline text-xl text-yellow-400 mb-4 block" href="#"
+              >Nile Homes</a
+            >
+            <p class="text-blue-100/60 text-sm leading-relaxed mb-6">
+              Curating architectural masterpieces and luxury living experiences
+              since 1994.
+            </p>
+            <div class="flex gap-3">
+              <a
+                class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-blue-100/60 hover:text-yellow-400 hover:bg-white/20 transition-all"
+                href="#"
+                ><span class="material-symbols-outlined text-lg"
+                  >social_leaderboard</span
+                ></a
+              >
+              <a
+                class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-blue-100/60 hover:text-yellow-400 hover:bg-white/20 transition-all"
+                href="#"
+                ><span class="material-symbols-outlined text-lg"
+                  >photo_camera</span
+                ></a
+              >
+              <a
+                class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-blue-100/60 hover:text-yellow-400 hover:bg-white/20 transition-all"
+                href="#"
+                ><span class="material-symbols-outlined text-lg"
+                  >alternate_email</span
+                ></a
+              >
+              <a
+                href="https://wa.me/201000000000"
+                class="w-9 h-9 rounded-full bg-green-500/20 flex items-center justify-center hover:bg-green-500 transition-all"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="w-4 h-4 text-green-400"
+                >
+                  <path
+                    d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm0 1.8c2.2 0 4.27.86 5.82 2.41a8.2 8.2 0 012.41 5.7c0 4.54-3.7 8.24-8.23 8.24-1.48 0-2.93-.4-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31A8.17 8.17 0 013.93 11.9c0-4.54 3.7-8.11 8.11-8.11zm-2.3 4.3c-.2 0-.51.08-.78.37-.27.29-1.02 1-1.02 2.44 0 1.43 1.04 2.82 1.19 3.01.15.2 2.04 3.11 4.94 4.24.69.3 1.23.47 1.65.6.69.22 1.32.19 1.82.11.55-.08 1.71-.7 1.95-1.37.24-.67.24-1.25.17-1.37-.07-.12-.27-.19-.57-.33-.3-.14-1.71-.84-1.98-.94-.27-.1-.47-.14-.67.14-.2.28-.77.94-.94 1.13-.17.2-.34.22-.64.08-.3-.14-1.25-.46-2.38-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.34.44-.51.15-.17.2-.29.3-.49.1-.2.05-.37-.02-.51-.08-.14-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51-.17 0-.37-.01-.57-.01z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h6 class="font-headline text-base mb-5 text-white">Explore</h6>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  class="text-blue-100/60 text-sm hover:text-yellow-400 transition-colors"
+                  href="#properties"
+                  >Properties</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-blue-100/60 text-sm hover:text-yellow-400 transition-colors"
+                  href="#categories"
+                  >Categories</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-blue-100/60 text-sm hover:text-yellow-400 transition-colors"
+                  href="#"
+                  >Neighborhoods</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-blue-100/60 text-sm hover:text-yellow-400 transition-colors"
+                  href="#"
+                  >New Listings</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="font-headline text-base mb-5 text-white">Company</h6>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  class="text-blue-100/60 text-sm hover:text-yellow-400 transition-colors"
+                  href="#about"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-blue-100/60 text-sm hover:text-yellow-400 transition-colors"
+                  href="#"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-blue-100/60 text-sm hover:text-yellow-400 transition-colors"
+                  href="#"
+                  >Investment</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-blue-100/60 text-sm hover:text-yellow-400 transition-colors"
+                  href="#"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="font-headline text-base mb-5 text-white">Contact</h6>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="tel:+201000000000"
+                  class="text-blue-100/60 text-sm hover:text-yellow-400 transition-colors flex items-center gap-2"
+                  ><span class="material-symbols-outlined text-sm">call</span
+                  >+20 100 000 0000</a
+                >
+              </li>
+              <li>
+                <a
+                  href="mailto:concierge@nilehomes.com"
+                  class="text-blue-100/60 text-sm hover:text-yellow-400 transition-colors flex items-center gap-2"
+                  ><span class="material-symbols-outlined text-sm">mail</span
+                  >Email Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/201000000000"
+                  class="text-blue-100/60 text-sm hover:text-yellow-400 transition-colors flex items-center gap-2"
+                  ><span class="material-symbols-outlined text-sm">chat</span
+                  >WhatsApp</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-blue-100/60 text-sm hover:text-yellow-400 transition-colors"
+                  href="#"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <p class="text-blue-100/40 text-xs uppercase tracking-widest">
+            © 2024 Nile Homes. All rights reserved.
+          </p>
+          <p class="text-blue-100/40 text-xs">
+            A legacy of architectural excellence since 1994
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== PROPERTY INQUIRY MODAL ===== -->
+    <div
+      id="inquiry-modal"
+      class="fixed inset-0 z-[60] flex items-center justify-center p-4 hidden"
+      aria-modal="true"
+      role="dialog"
+    >
+      <div
+        class="absolute inset-0 bg-black/60 backdrop-blur-sm"
+        data-modal-close
+      ></div>
+      <div
+        class="relative bg-white rounded-2xl p-8 max-w-md w-full shadow-2xl z-10 animate-[fadeInUp_0.3s_ease]"
+      >
+        <button
+          data-modal-close
+          class="absolute top-4 right-4 text-outline hover:text-primary transition-colors"
+          aria-label="Close inquiry modal"
+        >
+          <span class="material-symbols-outlined">close</span>
+        </button>
+        <h3 class="font-headline text-2xl text-primary mb-2">Inquire About</h3>
+        <p
+          id="modal-property-name"
+          class="text-secondary font-bold text-lg mb-6"
+        ></p>
+        <div class="space-y-4">
+          <input
+            id="modal-name"
+            class="w-full border-b-2 border-outline-variant focus:border-secondary outline-none py-2 text-sm placeholder:text-gray-300"
+            placeholder="Your Name"
+            type="text"
+          />
+          <input
+            id="modal-phone"
+            class="w-full border-b-2 border-outline-variant focus:border-secondary outline-none py-2 text-sm placeholder:text-gray-300"
+            placeholder="Phone Number"
+            type="tel"
+          />
+          <input
+            id="modal-email"
+            class="w-full border-b-2 border-outline-variant focus:border-secondary outline-none py-2 text-sm placeholder:text-gray-300"
+            placeholder="Email Address"
+            type="email"
+          />
+        </div>
+        <div class="flex gap-3 mt-8">
+          <button
+            id="modal-submit"
+            class="flex-1 py-3 bg-primary text-white rounded-xl font-bold text-sm hover:bg-primary-container transition-all"
+          >
+            Request Viewing
+          </button>
+          <a
+            id="modal-whatsapp"
+            href="#"
+            class="flex-1 py-3 bg-green-500 text-white rounded-xl font-bold text-sm text-center hover:bg-green-600 transition-all flex items-center justify-center gap-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm0 1.8c2.2 0 4.27.86 5.82 2.41a8.2 8.2 0 012.41 5.7c0 4.54-3.7 8.24-8.23 8.24-1.48 0-2.93-.4-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31A8.17 8.17 0 013.93 11.9c0-4.54 3.7-8.11 8.11-8.11zm-2.3 4.3c-.2 0-.51.08-.78.37-.27.29-1.02 1-1.02 2.44 0 1.43 1.04 2.82 1.19 3.01.15.2 2.04 3.11 4.94 4.24.69.3 1.23.47 1.65.6.69.22 1.32.19 1.82.11.55-.08 1.71-.7 1.95-1.37.24-.67.24-1.25.17-1.37-.07-.12-.27-.19-.57-.33-.3-.14-1.71-.84-1.98-.94-.27-.1-.47-.14-.67.14-.2.28-.77.94-.94 1.13-.17.2-.34.22-.64.08-.3-.14-1.25-.46-2.38-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.34.44-.51.15-.17.2-.29.3-.49.1-.2.05-.37-.02-.51-.08-.14-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51-.17 0-.37-.01-.57-.01z"
+              />
+            </svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PROPERTY DETAILS MODAL ===== -->
+    <div
+      id="details-modal"
+      class="fixed inset-0 z-[60] flex items-center justify-center p-4 hidden"
+      aria-modal="true"
+      role="dialog"
+    >
+      <div
+        class="absolute inset-0 bg-black/60 backdrop-blur-sm"
+        data-modal-close
+      ></div>
+      <div
+        class="relative bg-white rounded-3xl p-8 max-w-3xl w-full shadow-2xl z-10 animate-[fadeInUp_0.3s_ease] overflow-hidden"
+      >
+        <button
+          data-modal-close
+          class="absolute top-4 right-4 text-outline hover:text-primary transition-colors"
+          aria-label="Close details modal"
+        >
+          <span class="material-symbols-outlined">close</span>
+        </button>
+        <div class="grid grid-cols-1 lg:grid-cols-[350px_1fr] gap-8">
+          <img id="details-image" class="w-full h-80 rounded-3xl object-cover" src="" alt="Property image" loading="lazy" decoding="async" />
+          <div class="space-y-5">
+            <div>
+              <p id="details-status" class="inline-block px-4 py-2 rounded-full text-[11px] uppercase tracking-[0.25em] font-bold bg-secondary-container text-on-secondary-container"></p>
+              <h3 id="details-title" class="font-headline text-3xl mt-4 mb-3 text-primary"></h3>
+              <p id="details-location" class="text-on-surface-variant text-sm flex items-center gap-2"><span class="material-symbols-outlined text-base">location_on</span></p>
+              <p id="details-price" class="text-secondary font-bold text-2xl mt-4"></p>
+            </div>
+            <div id="details-description" class="text-on-surface-variant leading-relaxed"></div>
+            <div class="grid grid-cols-3 gap-4 text-xs uppercase tracking-[0.2em] font-bold text-outline">
+              <span id="details-beds" class="rounded-2xl bg-surface px-4 py-3 flex items-center justify-center gap-2"></span>
+              <span id="details-baths" class="rounded-2xl bg-surface px-4 py-3 flex items-center justify-center gap-2"></span>
+              <span id="details-size" class="rounded-2xl bg-surface px-4 py-3 flex items-center justify-center gap-2"></span>
+            </div>
+            <div id="details-amenities" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+              <button id="details-favorite-btn" class="flex-1 py-4 bg-primary text-white rounded-3xl font-bold uppercase tracking-[0.2em] hover:bg-primary-container transition-all text-sm">Add to Favorites</button>
+              <a id="details-whatsapp" class="flex-1 py-4 bg-green-500 text-white rounded-3xl font-bold uppercase tracking-wider hover:bg-green-600 transition-all text-sm text-center flex items-center justify-center gap-2" href="#">
+                <span class="material-symbols-outlined text-base">chat</span>
+                Contact via WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const appState = {
+        activeFilter: 'all',
+        activeTab: 'buy',
+        currentPage: 1,
+        pageSize: 6,
+        search: {
+          location: '',
+          type: 'all',
+          budget: 0,
+        },
+        favorites: new Set(),
+        filteredProperties: [],
+        activeDetailId: null,
+        properties: [
+          {
+            id: 'azure-heights',
+            title: 'Azure Heights',
+            category: 'villa',
+            market: 'sale',
+            location: 'Malibu, California',
+            price: 4250000,
+            priceLabel: '$4.25M',
+            badge: 'For Sale',
+            status: 'Featured',
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA3GyQ_qi3eHUf0ZsCBG0_5w0cu-GGOC0Jjp7lNM5vUjdR-vRGrxPEylbXu3NPZNbtFJ4xOzuVLyFNBxcOL0stebf3fejcq9d0jHp47Szy-5H4PLFtY83hD0GNGhBEX7OyUCgza50dL5dO9R363qBiRtdM3K7yihfhsk7AawJp2mrDCwHWsbB33GNASFN3yIxAqZHLuVVOfwzC4qPpbJySWFHDm7pg-OM0UnKJ98B9MRjVWAfI3EPVN_HAbV3MfVWCdp3EKxcnSHw',
+            beds: 5,
+            baths: 6,
+            size: '6,500 sqft',
+            description: 'Oceanfront villa with infinity pool, private cinema, and smart home automation for elevated luxury living.',
+            amenities: ['Private Infinity Pool', 'Smart Home', 'Beach Access', 'Cinema Room'],
+          },
+          {
+            id: 'the-obsidian',
+            title: 'The Obsidian',
+            category: 'apartment',
+            market: 'rent',
+            location: 'Aspen, Colorado',
+            price: 8500,
+            priceLabel: '$8,500/mo',
+            badge: 'For Rent',
+            status: 'New Listing',
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDRwfzo3fcPMZOEEHr8CBy6azaWyUMbY2qZwTwmzW3ArnUpmeqCe0bAQ-j-0F6GQGD9kzdWl86_Z5bkdyUVDNfPuAecOmsoJkioS0kZ4cK7HvSf7NVPSASc1TrhM739DXMwsy57cdU_vBEYQ8aeUPD0n7Z_blklt6qRrvOpPE3EE2khFDolpG2MWHwDOC2pyYQaYMDmCRCwGFZtQtHveB-UlD28yWXb-7CxtLzjW45FunZ79dJyzkwi1r2ax--fQjswQTJJ6eeAUg',
+            beds: 4,
+            baths: 4,
+            size: '4,200 sqft',
+            description: 'Contemporary mountain apartment with sweeping valley views, concierge service, and ski resort access.',
+            amenities: ['Concierge', 'Mountain Views', 'Fitness Room', 'Ski Storage'],
+          },
+          {
+            id: 'sky-residence',
+            title: 'Sky Residence',
+            category: 'penthouse',
+            market: 'sale',
+            location: 'Manhattan, NY',
+            price: 3500000,
+            priceLabel: '$3.5M',
+            badge: 'For Sale',
+            status: 'Penthouse',
+            image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBkqCbEqpXlukK-wa8sGQPd-SH4eU7lxc_adGtAUKvmAG_bpg1lkstDwXKNNy3YMVrLkiaJMbY5lgS-VAP4LbTUV9-gdJeOOd4Z7eix82GsUZ3EgW04dm659G8H7E4BHwVDlFC-hUWrchlWIihGocVTBvNiWoZf9Lb1iSm0ZCpffPvRhu4D0E9tMhHL60PalZNKTdMLYpP1iFsF9wykGj1km2SEh-NXemmhCZoAEvwm-xA-_rpJicEPwLOgNfsUp40LdesbwUk0uw',
+            beds: 3,
+            baths: 3.5,
+            size: '3,800 sqft',
+            description: 'Sky-high penthouse boasting skyline vistas, private rooftop lounge, and designer finishes.',
+            amenities: ['Private Roof Terrace', 'Smart Lighting', 'Wine Cellar', 'Secure Parking'],
+          },
+          {
+            id: 'oasis-terrace',
+            title: 'Oasis Terrace',
+            category: 'villa',
+            market: 'rent',
+            location: 'Dubai, UAE',
+            price: 9500,
+            priceLabel: '$9,500/mo',
+            badge: 'For Rent',
+            status: 'Luxury Villa',
+            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFmTxFA1TIDzRFPz2URTMO3IXkui2ShpGofA&s',
+            beds: 6,
+            baths: 7,
+            size: '7,200 sqft',
+            description: 'Luxury villa with private garden, infinity pool, and panoramic city skyline views.',
+            amenities: ['Private Garden', 'Infinity Pool', 'Staff Suite', 'Home Office'],
+          },
+          {
+            id: 'riverfront-loft',
+            title: 'Riverfront Loft',
+            category: 'apartment',
+            market: 'sale',
+            location: 'Miami, Florida',
+            price: 1200000,
+            priceLabel: '$1.2M',
+            badge: 'For Sale',
+            status: 'Loft',
+            image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80',
+            beds: 3,
+            baths: 3,
+            size: '2,300 sqft',
+            description: 'Modern riverfront apartment with breezy terraces, high ceilings, and custom finishes.',
+            amenities: ['River Views', 'Smart Climate', 'Gym Access', 'Valet Parking'],
+          },
+          {
+            id: 'skyline-office',
+            title: 'Skyline Office',
+            category: 'office',
+            market: 'rent',
+            location: 'London, UK',
+            price: 18000,
+            priceLabel: '$18,000/mo',
+            badge: 'For Rent',
+            status: 'Office Space',
+            image: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80',
+            beds: 0,
+            baths: 2,
+            size: '3,200 sqft',
+            description: 'Premium office suite with skyline views, high-speed connectivity, and flexible workspace.',
+            amenities: ['Boardroom', 'High-Speed WiFi', 'Reception Service', 'Private Parking'],
+          },
+          {
+            id: 'greenacre-land',
+            title: 'Greenacre Land',
+            category: 'land',
+            market: 'sale',
+            location: 'Austin, Texas',
+            price: 650000,
+            priceLabel: '$650K',
+            badge: 'For Sale',
+            status: 'Land Plot',
+            image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80',
+            beds: 0,
+            baths: 0,
+            size: '2.5 acres',
+            description: 'Premium development land located in a fast-growing suburban market, ready for future vision.',
+            amenities: ['River Access', 'Prime Location', 'Utilities Ready', 'Architect Plans Available'],
+          },
+          {
+            id: 'modern-court',
+            title: 'Modern Court',
+            category: 'apartment',
+            market: 'sale',
+            location: 'Barcelona, Spain',
+            price: 950000,
+            priceLabel: '$950K',
+            badge: 'For Sale',
+            status: 'Urban Apartment',
+            image: 'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80',
+            beds: 2,
+            baths: 2,
+            size: '1,750 sqft',
+            description: 'City-center apartment with bright interiors, minimalist design, and boutique neighborhood access.',
+            amenities: ['City Views', 'Walkable Location', 'Design Kitchen', '24/7 Concierge'],
+          },
+        ],
+      };
+
+      const dom = {
+        menuBtn: document.getElementById('menu-btn'),
+        mobileMenu: document.getElementById('mobile-menu'),
+        mobileLinks: Array.from(document.querySelectorAll('.mobile-menu-link')),
+        tabButtons: Array.from(document.querySelectorAll('[data-tab]')),
+        searchLocation: document.getElementById('search-location'),
+        searchType: document.getElementById('search-type'),
+        searchBudget: document.getElementById('search-budget'),
+        searchButton: document.getElementById('search-button'),
+        filterButtons: document.getElementById('filter-buttons'),
+        propertiesGrid: document.getElementById('properties-grid'),
+        skeletonGrid: document.getElementById('skeleton-grid'),
+        noResults: document.getElementById('no-results'),
+        loadMoreBtn: document.getElementById('load-more-btn'),
+        favoritesSection: document.getElementById('favorites-section'),
+        favoritesGrid: document.getElementById('favorites-grid'),
+        clearFavoritesBtn: document.getElementById('clear-favorites-btn'),
+        toast: document.getElementById('toast'),
+        toastMessage: document.getElementById('toast-message'),
+        toastIcon: document.getElementById('toast-icon'),
+        contactSubmit: document.getElementById('contact-submit'),
+        inquiryModal: document.getElementById('inquiry-modal'),
+        detailsModal: document.getElementById('details-modal'),
+        modalPropertyName: document.getElementById('modal-property-name'),
+        modalWhatsApp: document.getElementById('modal-whatsapp'),
+        modalName: document.getElementById('modal-name'),
+        modalPhone: document.getElementById('modal-phone'),
+        modalEmail: document.getElementById('modal-email'),
+        detailsImage: document.getElementById('details-image'),
+        detailsStatus: document.getElementById('details-status'),
+        detailsTitle: document.getElementById('details-title'),
+        detailsLocation: document.getElementById('details-location'),
+        detailsPrice: document.getElementById('details-price'),
+        detailsDescription: document.getElementById('details-description'),
+        detailsBeds: document.getElementById('details-beds'),
+        detailsBaths: document.getElementById('details-baths'),
+        detailsSize: document.getElementById('details-size'),
+        detailsAmenities: document.getElementById('details-amenities'),
+        detailsFavoriteBtn: document.getElementById('details-favorite-btn'),
+        detailsWhatsapp: document.getElementById('details-whatsapp'),
+        stickyCta: document.getElementById('sticky-cta'),
+      };
+
+      function initialize() {
+        loadFavorites();
+        renderFilterButtons();
+        attachListeners();
+        applyFilters(false);
+        renderSkeletonGrid();
+        observeSections();
+      }
+
+      function loadFavorites() {
+        try {
+          const data = JSON.parse(localStorage.getItem('nilehomes-favorites') || '[]');
+          if (Array.isArray(data)) {
+            appState.favorites = new Set(data);
+          }
+        } catch (error) {
+          appState.favorites = new Set();
+        }
+      }
+
+      function saveFavorites() {
+        localStorage.setItem('nilehomes-favorites', JSON.stringify([...appState.favorites]));
+      }
+
+      function renderFilterButtons() {
+        const categories = [
+          'all',
+          ...new Set(appState.properties.map((property) => property.category)),
+        ];
+
+        dom.filterButtons.innerHTML = categories
+          .map((category) => {
+            const isActive = appState.activeFilter === category;
+            return `
+              <button
+                type="button"
+                data-filter="${category}"
+                class="filter-btn flex-shrink-0 px-5 py-2 rounded-full border text-xs font-bold uppercase tracking-wider transition-all ${
+                  isActive
+                    ? 'bg-primary text-white border-primary'
+                    : 'border-outline-variant text-outline hover:border-primary hover:text-primary'
+                }"
+              >
+                ${category === 'all' ? 'All' : category.charAt(0).toUpperCase() + category.slice(1)}
+              </button>
+            `;
+          })
+          .join('');
+      }
+
+      function updateActiveFilterButtons() {
+        dom.filterButtons.querySelectorAll('[data-filter]').forEach((button) => {
+          const isActive = button.dataset.filter === appState.activeFilter;
+          button.classList.toggle('bg-primary', isActive);
+          button.classList.toggle('text-white', isActive);
+          button.classList.toggle('border-primary', isActive);
+          button.classList.toggle('border-outline-variant', !isActive);
+          button.classList.toggle('text-outline', !isActive);
+        });
+      }
+
+      function setActiveTab(tab) {
+        appState.activeTab = tab;
+        dom.tabButtons.forEach((button) => {
+          const isActive = button.dataset.tab === tab;
+          button.classList.toggle('active', isActive);
+          button.classList.toggle('bg-white/20', isActive);
+          button.classList.toggle('text-white', isActive);
+          button.classList.toggle('text-white/70', !isActive);
+        });
+        applyFilters(true);
+      }
+
+      function parseBudget(value) {
+        const digits = value.replace(/[^0-9]/g, '');
+        return digits ? parseInt(digits, 10) : 0;
+      }
+
+      function getFilteredProperties() {
+        const locationFilter = appState.search.location.trim().toLowerCase();
+        const typeFilter = appState.search.type;
+        const budgetFilter = appState.search.budget;
+
+        return appState.properties.filter((property) => {
+          const matchesCategory =
+            appState.activeFilter === 'all' || property.category === appState.activeFilter;
+          const matchesType = typeFilter === 'all' || property.category === typeFilter;
+          const matchesLocation =
+            !locationFilter ||
+            property.location.toLowerCase().includes(locationFilter) ||
+            property.title.toLowerCase().includes(locationFilter);
+          const matchesBudget =
+            !budgetFilter || property.price >= budgetFilter;
+          const matchesMarket =
+            appState.activeTab === 'buy'
+              ? property.market === 'sale'
+              : appState.activeTab === 'rent'
+              ? property.market === 'rent'
+              : true;
+
+          return (
+            matchesCategory &&
+            matchesType &&
+            matchesLocation &&
+            matchesBudget &&
+            matchesMarket
+          );
+        });
+      }
+
+      function applyFilters(scrollToResults = true) {
+        appState.search.location = dom.searchLocation.value;
+        appState.search.type = dom.searchType.value;
+        appState.search.budget = parseBudget(dom.searchBudget.value);
+
+        renderSkeletonGrid();
+        updateActiveFilterButtons();
+
+        setTimeout(() => {
+          appState.filteredProperties = getFilteredProperties();
+          appState.currentPage = 1;
+          renderProperties();
+          renderFavoritesSection();
+          if (scrollToResults) {
+            document.getElementById('properties').scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 230);
+      }
+
+      function renderSkeletonGrid() {
+        dom.noResults.classList.add('hidden');
+        dom.propertiesGrid.classList.add('opacity-50');
+        dom.skeletonGrid.classList.remove('hidden');
+        dom.propertiesGrid.innerHTML = '';
+
+        const skeletons = Array.from({ length: appState.pageSize }, () => `
+          <article class="rounded-3xl border border-outline-variant/50 bg-white p-6 shadow-sm">
+            <div class="h-56 bg-surface-container-lowest rounded-3xl mb-4 animate-pulse"></div>
+            <div class="h-4 bg-surface-container-lowest rounded-full mb-3 animate-pulse"></div>
+            <div class="h-4 bg-surface-container-lowest rounded-full w-5/6 mb-3 animate-pulse"></div>
+            <div class="grid grid-cols-3 gap-3 mt-4">
+              <div class="h-10 bg-surface-container-lowest rounded-2xl animate-pulse"></div>
+              <div class="h-10 bg-surface-container-lowest rounded-2xl animate-pulse"></div>
+              <div class="h-10 bg-surface-container-lowest rounded-2xl animate-pulse"></div>
+            </div>
+          </article>
+        `);
+
+        dom.skeletonGrid.innerHTML = skeletons.join('');
+      }
+
+      function renderProperties() {
+        dom.skeletonGrid.classList.add('hidden');
+        dom.propertiesGrid.classList.remove('opacity-50');
+
+        const list = appState.filteredProperties;
+        if (!list.length) {
+          dom.propertiesGrid.innerHTML = '';
+          dom.noResults.classList.remove('hidden');
+          dom.loadMoreBtn.classList.add('hidden');
+          return;
+        }
+
+        dom.noResults.classList.add('hidden');
+        const start = 0;
+        const end = appState.currentPage * appState.pageSize;
+        dom.propertiesGrid.innerHTML = list.slice(start, end).map(createPropertyCard).join('');
+        updateLoadMoreButton();
+      }
+
+      function createPropertyCard(property) {
+        const isFavorite = appState.favorites.has(property.id);
+        const labelColor = property.market === 'rent'
+          ? 'bg-blue-100 text-blue-800'
+          : 'bg-secondary-container text-on-secondary-container';
+
+        return `
+          <article
+            data-id="${property.id}"
+            class="prop-card bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500"
+          >
+            <div class="h-64 overflow-hidden relative">
+              <img
+                src="${property.image}"
+                alt="${property.title}"
+                loading="lazy"
+                decoding="async"
+                class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+              />
+              <div class="absolute top-4 left-4 flex gap-2">
+                <span class="bg-white/95 backdrop-blur px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-widest text-primary">${property.status}</span>
+                <span class="${labelColor} px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-widest">${property.badge}</span>
+              </div>
+              <button
+                type="button"
+                data-action="favorite"
+                data-id="${property.id}"
+                class="absolute top-4 right-4 w-9 h-9 bg-white/90 rounded-full flex items-center justify-center text-outline hover:text-red-500 transition-colors"
+                aria-label="${isFavorite ? 'Remove' : 'Add'} ${property.title} from favorites"
+              >
+                <span class="material-symbols-outlined text-lg">${isFavorite ? 'favorite' : 'favorite_border'}</span>
+              </button>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-3">
+                <h4 class="font-headline text-xl text-primary">${property.title}</h4>
+                <span class="text-secondary font-bold text-lg">${property.priceLabel}</span>
+              </div>
+              <p class="flex items-center gap-1 text-on-surface-variant text-sm mb-4">
+                <span class="material-symbols-outlined text-sm">location_on</span>
+                ${property.location}
+              </p>
+              <div class="flex gap-4 mb-6 text-xs font-bold text-outline uppercase tracking-wider border-t border-outline-variant/20 pt-4">
+                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bed</span>${property.beds} Beds</span>
+                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">bathtub</span>${property.baths} Baths</span>
+                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">square_foot</span>${property.size}</span>
+              </div>
+              <div class="flex gap-3">
+                <button
+                  type="button"
+                  data-action="details"
+                  data-id="${property.id}"
+                  class="flex-1 py-3 rounded-lg border border-primary text-primary font-bold text-sm hover:bg-primary hover:text-white transition-all"
+                >
+                  View Details
+                </button>
+                <a
+                  href="https://wa.me/201000000000?text=أريد الاستفسار عن ${encodeURIComponent(property.title)}"
+                  class="w-12 h-12 bg-green-50 text-green-600 rounded-lg flex items-center justify-center hover:bg-green-500 hover:text-white transition-all"
+                  aria-label="WhatsApp inquiry for ${property.title}"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm0 1.8c2.2 0 4.27.86 5.82 2.41a8.2 8.2 0 012.41 5.7c0 4.54-3.7 8.24-8.23 8.24-1.48 0-2.93-.4-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31A8.17 8.17 0 013.93 11.9c0-4.54 3.7-8.11 8.11-8.11zm-2.3 4.3c-.2 0-.51.08-.78.37-.27.29-1.02 1-1.02 2.44 0 1.43 1.04 2.82 1.19 3.01.15.2 2.04 3.11 4.94 4.24.69.3 1.23.47 1.65.6.69.22 1.32.19 1.82.11.55-.08 1.71-.7 1.95-1.37.24-.67.24-1.25.17-1.37-.07-.12-.27-.19-.57-.33-.3-.14-1.71-.84-1.98-.94-.27-.1-.47-.14-.67.14-.2.28-.77.94-.94 1.13-.17.2-.34.22-.64.08-.3-.14-1.25-.46-2.38-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.34.44-.51.15-.17.2-.29.3-.49.1-.2.05-.37-.02-.51-.08-.14-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51-.17 0-.37-.01-.57-.01z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        `;
+      }
+
+      function updateLoadMoreButton() {
+        const total = appState.filteredProperties.length;
+        const visibleCount = appState.currentPage * appState.pageSize;
+        const hasMore = visibleCount < total;
+        dom.loadMoreBtn.classList.toggle('hidden', !hasMore);
+      }
+
+      function renderFavoritesSection() {
+        const favorites = appState.properties.filter((property) => appState.favorites.has(property.id));
+        const hasFavorites = favorites.length > 0;
+        dom.favoritesSection.classList.toggle('hidden', !hasFavorites);
+        if (!hasFavorites) {
+          dom.favoritesGrid.innerHTML = '';
+          return;
+        }
+        dom.favoritesGrid.innerHTML = favorites.map(createPropertyCard).join('');
+      }
+
+      function toggleFavorite(propertyId) {
+        const property = appState.properties.find((item) => item.id === propertyId);
+        if (!property) return;
+
+        if (appState.favorites.has(propertyId)) {
+          appState.favorites.delete(propertyId);
+          showToast(`${property.title} تمت إزالته من المفضلة`, 'warning');
+        } else {
+          appState.favorites.add(propertyId);
+          showToast(`${property.title} تمت إضافته إلى المفضلة`, 'success');
+        }
+
+        saveFavorites();
+        renderProperties();
+        renderFavoritesSection();
+        updateDetailsFavoriteButton();
+      }
+
+      function openDetails(propertyId) {
+        const property = appState.properties.find((item) => item.id === propertyId);
+        if (!property) return;
+
+        appState.activeDetailId = propertyId;
+        dom.detailsImage.src = property.image;
+        dom.detailsImage.alt = property.title;
+        dom.detailsStatus.textContent = property.status;
+        dom.detailsTitle.textContent = property.title;
+        dom.detailsLocation.innerHTML = `<span class="material-symbols-outlined text-base">location_on</span>${property.location}`;
+        dom.detailsPrice.textContent = property.priceLabel;
+        dom.detailsDescription.textContent = property.description;
+        dom.detailsBeds.textContent = `6CF ${property.beds} Beds`;
+        dom.detailsBaths.textContent = `6C0 ${property.baths} Baths`;
+        dom.detailsSize.textContent = `4C8 ${property.size}`;
+        dom.detailsAmenities.innerHTML = property.amenities
+          .map((amenity) => `<span class="rounded-2xl bg-surface px-4 py-3 text-[11px] text-on-surface-variant">${amenity}</span>`)
+          .join('');
+        dom.detailsFavoriteBtn.dataset.id = propertyId;
+        dom.detailsFavoriteBtn.textContent = appState.favorites.has(propertyId)
+          ? 'Remove from Favorites'
+          : 'Add to Favorites';
+        dom.detailsWhatsapp.href = `https://wa.me/201000000000?text=أريد الاستفسار عن ${encodeURIComponent(property.title)}`;
+        openModal(dom.detailsModal);
+      }
+
+      function openInquiry(propertyId) {
+        const property = appState.properties.find((item) => item.id === propertyId);
+        if (!property) return;
+
+        appState.activeDetailId = propertyId;
+        dom.modalPropertyName.textContent = property.title;
+        dom.modalWhatsApp.href = `https://wa.me/201000000000?text=أريد الاستفسار عن ${encodeURIComponent(property.title)}`;
+        dom.modalName.value = '';
+        dom.modalPhone.value = '';
+        dom.modalEmail.value = '';
+        openModal(dom.inquiryModal);
+      }
+
+      function openModal(modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal(modal) {
+        modal.classList.add('hidden');
+        if (
+          dom.inquiryModal.classList.contains('hidden') &&
+          dom.detailsModal.classList.contains('hidden')
+        ) {
+          document.body.style.overflow = '';
+        }
+      }
+
+      function closeAllModals() {
+        [dom.inquiryModal, dom.detailsModal].forEach((modal) => {
+          modal.classList.add('hidden');
+        });
+        document.body.style.overflow = '';
+      }
+
+      function updateDetailsFavoriteButton() {
+        if (!appState.activeDetailId || !dom.detailsFavoriteBtn) return;
+        dom.detailsFavoriteBtn.textContent = appState.favorites.has(appState.activeDetailId)
+          ? 'Remove from Favorites'
+          : 'Add to Favorites';
+      }
+
+      function showToast(message, type = 'success') {
+        const toast = dom.toast;
+        const text = dom.toastMessage;
+        const icon = dom.toastIcon;
+
+        const palette = {
+          success: { bg: 'bg-green-600', icon: 'check_circle' },
+          warning: { bg: 'bg-amber-600', icon: 'warning' },
+          error: { bg: 'bg-red-600', icon: 'dangerous' },
+        };
+
+        const chosen = palette[type] || palette.success;
+        toast.classList.remove('bg-green-600', 'bg-amber-600', 'bg-red-600');
+        toast.classList.add(chosen.bg);
+        icon.textContent = chosen.icon;
+        text.textContent = message;
+        toast.classList.add('show');
+        toast.classList.remove('opacity-0', 'pointer-events-none');
+
+        window.clearTimeout(appState.toastTimer);
+        appState.toastTimer = window.setTimeout(() => {
+          toast.classList.remove('show');
+          toast.classList.add('opacity-0', 'pointer-events-none');
+        }, 3200);
+      }
+
+      function validateContactForm() {
+        const name = dom.modalName.value.trim();
+        const email = dom.modalEmail.value.trim();
+        const phone = dom.modalPhone.value.trim();
+        if (!name || !email) {
+          showToast('يرجى إدخال الاسم والبريد الإلكتروني', 'error');
+          return false;
+        }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          showToast('يرجى إدخال بريد إلكتروني صالح', 'error');
+          return false;
+        }
+        return true;
+      }
+
+      function handleContactSubmit(event) {
+        event.preventDefault();
+        if (!validateContactForm()) return;
+        closeAllModals();
+        showToast('شكراً! سنقوم بالتواصل معك قريباً', 'success');
+      }
+
+      function handleGridClick(event) {
+        const button = event.target.closest('[data-action]');
+        if (!button) return;
+        const propertyId = button.dataset.id;
+        const action = button.dataset.action;
+        if (!propertyId || !action) return;
+
+        if (action === 'favorite') {
+          toggleFavorite(propertyId);
+        }
+        if (action === 'details') {
+          openDetails(propertyId);
+        }
+      }
+
+      function handleModalClick(event) {
+        if (event.target.closest('[data-modal-close]')) {
+          closeAllModals();
+        }
+      }
+
+      function clearFavorites() {
+        appState.favorites.clear();
+        saveFavorites();
+        renderProperties();
+        renderFavoritesSection();
+        showToast('تم مسح المفضلة', 'warning');
+      }
+
+      function attachListeners() {
+        dom.menuBtn?.addEventListener('click', () => dom.mobileMenu.classList.toggle('open'));
+        dom.mobileLinks.forEach((link) => {
+          link.addEventListener('click', () => dom.mobileMenu.classList.remove('open'));
+        });
+
+        dom.tabButtons.forEach((button) => {
+          button.addEventListener('click', () => setActiveTab(button.dataset.tab));
+        });
+
+        dom.searchButton.addEventListener('click', () => applyFilters(true));
+        dom.searchBudget.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter') applyFilters(true);
+        });
+        dom.searchLocation.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter') applyFilters(true);
+        });
+        dom.searchType?.addEventListener('change', () => applyFilters(true));
+
+        dom.filterButtons.addEventListener('click', (event) => {
+          const button = event.target.closest('[data-filter]');
+          if (!button) return;
+          appState.activeFilter = button.dataset.filter;
+          updateActiveFilterButtons();
+          applyFilters(true);
+        });
+
+        document.querySelectorAll('[data-filter-target]').forEach((card) => {
+          card.addEventListener('click', () => {
+            appState.activeFilter = card.dataset.filterTarget;
+            updateActiveFilterButtons();
+            applyFilters(true);
+          });
+        });
+
+        dom.propertiesGrid.addEventListener('click', handleGridClick);
+        dom.favoritesGrid.addEventListener('click', handleGridClick);
+        dom.loadMoreBtn.addEventListener('click', () => {
+          appState.currentPage += 1;
+          renderProperties();
+        });
+        dom.clearFavoritesBtn?.addEventListener('click', clearFavorites);
+        dom.contactSubmit?.addEventListener('click', handleContactSubmit);
+        dom.inquiryModal?.addEventListener('click', handleModalClick);
+        dom.detailsModal?.addEventListener('click', handleModalClick);
+        dom.detailsFavoriteBtn?.addEventListener('click', () => {
+          if (appState.activeDetailId) toggleFavorite(appState.activeDetailId);
+        });
+        window.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape') closeAllModals();
+        });
+        window.addEventListener('scroll', () => {
+          dom.stickyCta?.classList.toggle('show', window.scrollY > 400);
+          dom.mobileMenu.classList.remove('open');
+        });
+      }
+
+      function observeSections() {
+        const sections = document.querySelectorAll('.fade-in-section');
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+              }
+            });
+          },
+          { threshold: 0.15 },
+        );
+
+        sections.forEach((section) => {
+          observer.observe(section);
+          if (section.getBoundingClientRect().top < window.innerHeight * 1.2) {
+            section.classList.add('visible');
+          }
+        });
+
+        const counterObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                animateCounters();
+                counterObserver.disconnect();
+              }
+            });
+          },
+          { threshold: 0.3 },
+        );
+
+        const aboutSection = document.getElementById('about');
+        if (aboutSection) counterObserver.observe(aboutSection);
+      }
+
+      function animateCounters() {
+        document.querySelectorAll('.counter-value[data-target]').forEach((element) => {
+          const target = parseInt(element.dataset.target, 10);
+          const suffix = element.dataset.suffix || '+';
+          const isCurrency = element.textContent.startsWith('$');
+          let current = 0;
+          const step = Math.max(1, Math.round(target / 60));
+
+          const intervalId = setInterval(() => {
+            current = Math.min(current + step, target);
+            element.textContent = `${isCurrency ? '$' : ''}${current}${current >= target ? suffix : ''}`;
+            if (current >= target) clearInterval(intervalId);
+          }, 25);
+        });
+      }
+
+      initialize();
+    </script>
+  </body>
+</html>
